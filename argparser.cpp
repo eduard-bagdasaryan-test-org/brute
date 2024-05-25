@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector> 
   
-void ArgParser::PrintUsage() const  
+void ArgParser::PrintUsage() const   
 { 
     cout << "brute: sample brute-force attack utility." << endl;
     cout << "Author:  Bagdasaryan E.G." << endl;
