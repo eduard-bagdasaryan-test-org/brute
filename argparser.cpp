@@ -12,7 +12,7 @@ void ArgParser::PrintUsage() const
 }
  
 void ArgParser::PrintArgs() const
-{
+{ 
     cout << "================= Arguments: ==================" << endl;
     cout << setw(15) << left <<  "StartLen" << " = " << StartLen << endl;
     cout << setw(15) << left << "EndLen" << " = " << EndLen << endl;
