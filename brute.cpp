@@ -24,7 +24,6 @@ void BruteHelper::CrackParallel()
     }
 }
 
-
 void BruteHelper::PrintResult() const
 {
     string s = "OK";
@@ -34,6 +33,7 @@ void BruteHelper::PrintResult() const
     if(Found)
 	cout << "Found key:               " << SrcKey << endl;
 }
+
 
 void BrutePerformer::Crack()
 {
