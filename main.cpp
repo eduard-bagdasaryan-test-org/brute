@@ -2,10 +2,8 @@
 #include "generator.h"
 #include "tests.h"
 #include "brute.h"
- 
-  
+   
 static void Func() {}
-
 
 int main(int argc, char**argv)
 {
