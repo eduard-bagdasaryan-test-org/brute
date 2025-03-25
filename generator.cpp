@@ -1,7 +1,7 @@
 #include "generator.h"
 #include <iostream>
 #include <vector>
- 
+
 StrGenerator::StrGenerator(char first, int cnt1, char second, int cnt2, int maxlen, int start_len)
 :MaxPassLen(maxlen), PassLen(start_len), AmntToGen(300)
 {
@@ -11,6 +11,7 @@ StrGenerator::StrGenerator(char first, int cnt1, char second, int cnt2, int maxl
     for(int i = 0; i < cnt2; ++i)
         SymbolVec.push_back(second+i);
 }
+
 void StrGenerator::PrintSymbols() const
 {
     for(int i = 0; i < SymbolVec.size(); ++i)
