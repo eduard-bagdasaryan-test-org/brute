@@ -2,7 +2,6 @@
 #define TEST_DOT_H
 #include "generator.h"
 
-
 //Contains some helper testing methods for char sequence data generation ( StrGenerator ) 
 class BruteTester
 {
@@ -12,7 +11,6 @@ class BruteTester
        void GeneratorCompareTest();
        void GenerateToFile(string const &);
        void BlocksGenerateToFile(string const &);
-
     private:
        char FirstChar;
        int  FirstCount;
@@ -21,5 +19,6 @@ class BruteTester
        int  MaxPassLen;
        int  StartLen;
 };
+
 
 #endif
