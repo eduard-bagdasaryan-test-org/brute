@@ -20,4 +20,5 @@ class BruteTester
        int  StartLen;
 };
 
+
 #endif
