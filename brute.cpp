@@ -12,6 +12,7 @@ void BruteHelper::CrackParallel()
 	std::thread thread(&BrutePerformer::Crack, p.get());
 	thread.detach();  
     }
+	
     int left_threads = NumThreads; 
     while(left_threads)
     {
