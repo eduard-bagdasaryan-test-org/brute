@@ -21,7 +21,7 @@ void BruteHelper::CrackParallel()
 	    return;
 	}
 	left_threads--;
-    }
+    } 
 }
 
 void BruteHelper::PrintResult() const
