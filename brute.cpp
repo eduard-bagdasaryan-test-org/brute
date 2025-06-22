@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include <vector>  
-         
+        
 void BruteHelper::CrackParallel() 
 {    
     for(int i = 0; i < NumThreads; ++i) 
@@ -10,19 +10,19 @@ void BruteHelper::CrackParallel()
         shared_ptr<BrutePerformer> p(new BrutePerformer(this)); 
 	PVec.push_back(p);
 	std::thread thread(&BrutePerformer::Crack, p.get());
-	thread.detach();  
-    }
-	
+	thread.detach();
+    }	
     int left_threads = NumThreads; 
     while(left_threads)
-    {
+    { 
+	    
 	unique_lock<mutex> lock(Mutex);
 	Condition.wait(lock); 
 	if(Found) {
 	    return;
 	}
 	left_threads--;
-    }
+    } 
 }
 
 
