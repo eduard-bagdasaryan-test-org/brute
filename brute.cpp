@@ -21,6 +21,7 @@ void BruteHelper::CrackParallel()
 	if(Found) {
 	    return;
 	}
+		
 	left_threads--;
     } 
 }
