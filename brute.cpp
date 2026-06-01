@@ -53,7 +53,7 @@ void BrutePerformer::Crack()
 	    if(hash == Helper->GetHash())
 	    {
 		unique_lock<mutex> lock(*Helper->GetMutex());
-		Helper->SetFound(vec[i]);
+		Helper->SetFound(vec[i]); 
 		Helper->GetCondition()->notify_one();
 		return;
 	    }
