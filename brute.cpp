@@ -1,18 +1,18 @@
 #include "brute.h"
 #include <iostream>
 
-#include <vector>  
-        
-void BruteHelper::CrackParallel() 
-{    
-    for(int i = 0; i < NumThreads; ++i) 
+#include <vector>     
+ 
+void BruteHelper::CrackParallel()
+{   
+    for(int i = 0; i < NumThreads; ++i)   
     { 
-        shared_ptr<BrutePerformer> p(new BrutePerformer(this)); 
+        shared_ptr<BrutePerformer> p(new BrutePerformer(this));   
 	PVec.push_back(p);
 	std::thread thread(&BrutePerformer::Crack, p.get());
 	thread.detach();
     }	
-    int left_threads = NumThreads; 
+    int left_threads = NumThreads;  
     while(left_threads)
     { 	    
 	unique_lock<mutex> lock(Mutex);
@@ -20,6 +20,7 @@ void BruteHelper::CrackParallel()
 	if(Found) {
 	    return;
 	}
+		
 	left_threads--;
     } 
 }
@@ -51,7 +52,7 @@ void BrutePerformer::Crack()
 	    if(hash == Helper->GetHash())
 	    {
 		unique_lock<mutex> lock(*Helper->GetMutex());
-		Helper->SetFound(vec[i]);
+		Helper->SetFound(vec[i]); 
 		Helper->GetCondition()->notify_one();
 		return;
 	    }
