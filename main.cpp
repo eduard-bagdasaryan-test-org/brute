@@ -29,6 +29,7 @@ int main(int argc, char**argv)
     cout << endl;
     start = std::chrono::system_clock::now();
     helper.CrackParallel();
+   
     end = std::chrono::system_clock::now();
     helper.PrintResult();
     std::chrono::duration<double> elapsed_seconds = end-start;
