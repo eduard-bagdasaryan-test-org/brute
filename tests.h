@@ -1,7 +1,7 @@
 #ifndef TEST_DOT_H
 #define TEST_DOT_H
 #include "generator.h" 
-
+ 
 //Contains some helper testing methods for char sequence data generation ( StrGenerator)          
 class BruteTester
 { 
