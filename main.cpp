@@ -12,7 +12,7 @@ int main(int argc, char**argv)
     {
         parser.PrintUsage();
         return 1;
-    }
+    } 
     parser.PrintArgs();
     StrGenerator generator(parser.GetFirst1(),
             parser.GetCnt1(),
