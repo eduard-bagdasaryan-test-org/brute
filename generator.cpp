@@ -4,7 +4,7 @@
 
 
 StrGenerator::StrGenerator(char first, int cnt1, char second, int cnt2, int maxlen, int start_len)
-:MaxPassLen(maxlen), PassLen(start_len), AmntToGen(300)
+:MaxPassLen(maxlen), PassLen(start_len), AmntToGen(300) 
 {
     InitCurStateVec();
     for(int i = 0; i < cnt1; ++i)
